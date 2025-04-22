@@ -1,17 +1,12 @@
-# Simple RISC CPU
+#RISC CPU
+注意$readmemb读取文件路径的格式；
+注意根据IEEE2005年标准rom或ram中若出现reg[8:0] mem[0,8]等声明，则表示位宽的那一项即[0,8]应用小端格式；
 
-代码格式优化、一键编译仿真
-
-## ⛓ Prerequisites
-
-1. 编译工具：[iverilog](https://github.com/gtkwave/gtkwave)
-2. 可选择使用：[gtkwave](https://github.com/gtkwave/gtkwave)，查看波形
-
-## 🛠️ 运行
-
+#波形查看
+在test文件夹中使用gtkwave查看wave.fst
+在终端中执行如下指令：
 ```shell
-bash ./test/test.sh
+cd test
+gtkwave wave.fst
 ```
-
-将生成 `risc_cpu_test.vvp` 文件在 `./test` 下，并通过  `vvp `运行仿真，波形文件将保存在 `./test/wave.fst` ，可通过gtkwave等程序查看。
 # RISC_CPU_XIAYUWEN_TEXTBOOK
